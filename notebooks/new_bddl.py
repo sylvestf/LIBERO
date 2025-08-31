@@ -35,7 +35,6 @@ from libero.libero.utils.object_utils import get_affordance_regions
 from libero.libero.utils.mu_utils import register_mu, InitialSceneTemplates
 
 from libero.libero.envs import OffScreenRenderEnv
-from IPython.display import display
 from PIL import Image
 
 import torch
