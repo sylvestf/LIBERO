@@ -59,7 +59,7 @@ class CustomObjects(MujocoXMLObject):
         self.object_properties = {"vis_site_names": {}}
 
 @register_object
-class LiberoMug(CustomObjects):
+class LiberoMug1(CustomObjects):
     def __init__(self,
                  name="libero_mug",
                  obj_name="libero_mug",
@@ -81,7 +81,7 @@ class LiberoMug(CustomObjects):
         self.rotation_axis = None
 
 @register_object
-class LiberoMugYellow(CustomObjects):
+class LiberoMugYellow1(CustomObjects):
     def __init__(self,
                  name="libero_mug",
                  obj_name="libero_mug",
@@ -176,7 +176,7 @@ register_task_info(language,
 )
 
 YOUR_BDDL_FILE_PATH = "./custom_pddl"
-YOUR_SAVE_FILE_NAME = ""
+YOUR_SAVE_FILE_NAME = "/home/ps/LIBERO/custom_pddl/image.jpg"
 
 bddl_file_names, failures = generate_bddl_from_task_info(folder=YOUR_BDDL_FILE_PATH)
 print(bddl_file_names)
