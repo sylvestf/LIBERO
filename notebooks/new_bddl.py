@@ -59,7 +59,7 @@ class CustomObjects(MujocoXMLObject):
         self.object_properties = {"vis_site_names": {}}
 
 @register_object
-class LiberoMug(CustomObjects):
+class LiberoMug1(CustomObjects):
     def __init__(self,
                  name="libero_mug",
                  obj_name="libero_mug",
@@ -81,7 +81,7 @@ class LiberoMug(CustomObjects):
         self.rotation_axis = None
 
 @register_object
-class LiberoMugYellow(CustomObjects):
+class LiberoMugYellow1(CustomObjects):
     def __init__(self,
                  name="libero_mug",
                  obj_name="libero_mug",
@@ -113,7 +113,7 @@ class KitchenDemoScene(InitialSceneTemplates):
         }
 
         object_num_info = {
-            "libero_mug": 1,
+            "libero_mug": 2,
             "libero_mug_yellow": 1,
         }
 
@@ -142,6 +142,15 @@ class KitchenDemoScene(InitialSceneTemplates):
                 region_half_len=0.025,
             )
         )
+        
+        self.regions.update(
+            self.get_region_dict(
+                region_centroid_xy=[0.2, 0.2],
+                region_name="libero_mug_init_region_2",
+                target_name=self.workspace_name,
+                region_half_len=0.025,
+            )
+        )
 
         self.regions.update(
             self.get_region_dict(
@@ -159,6 +168,7 @@ class KitchenDemoScene(InitialSceneTemplates):
     def init_states(self):
         states = [
             ("On", "libero_mug_1", "kitchen_table_libero_mug_init_region"),
+            ("On", "libero_mug_2", "kitchen_table_libero_mug_init_region_2"),
             ("On", "libero_mug_yellow_1", "kitchen_table_libero_mug_yellow_init_region"),
             ("On", "wooden_cabinet_1", "kitchen_table_wooden_cabinet_init_region"),
         ]
@@ -176,7 +186,7 @@ register_task_info(language,
 )
 
 YOUR_BDDL_FILE_PATH = "./custom_pddl"
-YOUR_SAVE_FILE_NAME = ""
+YOUR_SAVE_FILE_NAME = "/home/ps/LIBERO/custom_pddl/image.jpg"
 
 bddl_file_names, failures = generate_bddl_from_task_info(folder=YOUR_BDDL_FILE_PATH)
 print(bddl_file_names)
