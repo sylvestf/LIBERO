@@ -7,8 +7,7 @@
 	      specular="0.0" texrepeat="3 3" texture="texplane" texuniform="true"/>
     <!-- ceramic table texture and material-->
     <texture file="../textures/martin_novak_wood_table.png" type="cube" name="tex-table"/>
-    <texture file="../textures/new.png" type="cube" name="tex-table-new"/>
-    <material name="table_texture" reflectance="0.0" shininess="0.0" specular="0.2" texrepeat="1 1" texture="tex-table-new" />
+    <material name="table_texture" reflectance="0.0" shininess="0.0" specular="0.2" texrepeat="1 1" texture="tex-table" />
     <!-- steel legs -->
     <texture file="../textures/martin_novak_wood_table.png" type="cube" name="tex-table-legs"/>
     <material name="table_legs" reflectance="0.8" shininess="0.8" texrepeat="1 1" texture="tex-table-legs" />
